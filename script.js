@@ -2,7 +2,7 @@
 let resetta = document.getElementById("resetta");
 let element = document.getElementById("element");
 let decrementa = document.getElementById("decrementa")
-let bonne = document.getElementById("bonne")
+let plus = document.getElementById("plus")
 
 let count = 0;
 let tema = localStorage.getItem("count");
@@ -10,9 +10,10 @@ let tema = localStorage.getItem("count");
 console.log(tema);
 
 
-bonne.addEventListener("click" ,function (){
+plus.addEventListener("click" ,function (){
     count += 5;
     element.textContent = count;
+    localStorage.setItem("count", count );
 })
 
 
